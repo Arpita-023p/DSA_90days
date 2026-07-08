@@ -1,24 +1,15 @@
 #include<iostream>
 #include<string>
-using namespace std; 
-string replaceSpaces(string &str){
-	string temp="";
-   for(int i=0;i<str.length();i++){
-	   if(str[i]==' '){
-		   temp.push_back('@');
-		   temp.push_back('4');
-		   temp.push_back('0');
-	   }
-	   else{
-		   temp.push_back(str[i]);
-	   }
-   }
-   return temp;
-}
+using namespace std;
 int main(){
-    string s;
-    cout<<"Enter the string "<<endl;
-   getline(cin, s);
-    cout<<"after remove the space "<<replaceSpaces(s)<<endl;
-    return 0;
+  string s="go for interview";
+   int n=s.length();
+   string result=" ";
+   for(int i=0;i<n;i++){
+    if(s[i]!=' '){
+        result=result+s[i];
+    }
+   }
+    cout<<result;
+return 0;
 }
